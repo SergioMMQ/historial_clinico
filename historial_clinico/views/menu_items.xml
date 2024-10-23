@@ -1,0 +1,15 @@
+<!-- /views/menu_items.xml -->
+<odoo>
+    <!-- Menú principal -->
+    <menuitem id="menu_clinical_history_main" name="Historial Clínico" sequence="1"/>
+
+    <!-- Acción de ventana para mostrar la lista de historiales -->
+    <record id="action_clinical_history" model="ir.actions.act_window">
+        <field name="name">Historial Clínico</field>
+        <field name="res_model">clinical.history</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Submenú que usa la acción definida -->
+    <menuitem id="menu_clinical_history" name="Historiales" parent="menu_clinical_history_main" action="action_clinical_history"/>
+</odoo>

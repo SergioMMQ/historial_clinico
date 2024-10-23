@@ -1,0 +1,37 @@
+<odoo>
+    <record id="view_clinical_history_tree" model="ir.ui.view">
+        <field name="name">clinical.history.tree</field>
+        <field name="model">clinical.history</field>
+        <field name="arch" type="xml">
+            <tree string="Historial Clínico">
+                <field name="patient_id"/>
+                <field name="date"/>
+                <field name="diagnosis"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_clinical_history_form" model="ir.ui.view">
+        <field name="name">clinical.history.form</field>
+        <field name="model">clinical.history</field>
+        <field name="arch" type="xml">
+            <form string="Historial Clínico">
+                <sheet>
+                    <group>
+                        <field name="patient_id"/>
+                        <field name="date"/>
+                    </group>
+                    <group>
+                        <field name="diagnosis"/>
+                        <field name="treatment"/>
+                        <field name="doctor"/>
+                    </group>
+                    <group>
+                        <field name="notes"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    
+</odoo>
